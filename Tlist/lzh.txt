@@ -1,0 +1,18 @@
+sudo apt-get install vim-scripts ctags &&  vim-addons install taglist
+
+
+apt-get install vim
+apt-get install ctags
+apt-get install vim-scripts
+vim-addons install taglist
+vim-addons install winmanager
+
+生成tag文件
+进入需要操作的目录执行：ctags -R *
+
+
+http://blog.csdn.net/eric_sunah/article/details/51028874
+
+http://blog.csdn.net/wooin/article/details/1858917
+
+
