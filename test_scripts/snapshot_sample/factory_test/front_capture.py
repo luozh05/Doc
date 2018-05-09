@@ -9,7 +9,7 @@ import time
 HOST="172.20.1.11"
 PORT=37568 
 
-def take_a_pic(msg,file_name):
+def take_a_pic(msg):
     # Create a socket (SOCK_STREAM means a TCP socket)
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -27,7 +27,8 @@ def take_a_pic(msg,file_name):
     size = struct.unpack('iiii', buf)
     print repr(size)
 
-    name = "./Picture/" + file_name + time.strftime('-%Y%m%d') + ".jpg"
+    file_name = "front"
+    name = "./Picture/" + file_name + time.strftime('-%Y%m%d(%H:%M:%S)') + ".jpg"
     print "name=",name
     with open(name, 'wb') as img:
         while True:
@@ -40,3 +41,11 @@ def take_a_pic(msg,file_name):
 
     image = Image.open(name)
     image.show()
+
+if __name_ == "__main__":
+    cmd = {}
+    cmd["cmd-take-picture"] = "picture-size=1280x800;preview-format=preview-format-h264"
+    cmd_string = json.dumps(cmd)
+    take_a_pic(cmd_string)
+    print "case 0 succeed!"
+
