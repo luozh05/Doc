@@ -42,7 +42,7 @@ def take_a_pic(msg):
     image = Image.open(name)
     image.show()
 
-if __name_ == "__main__":
+if __name__ == "__main__":
     cmd = {}
     cmd["cmd-take-picture"] = "picture-size=1280x800;preview-format=preview-format-h264"
     cmd_string = json.dumps(cmd)

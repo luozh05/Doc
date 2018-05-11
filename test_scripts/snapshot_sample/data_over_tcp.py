@@ -6,7 +6,8 @@ import Image
 import struct
 import time
 
-HOST="172.20.1.11"
+#HOST="172.20.1.11"
+HOST="192.168.1.2"
 PORT=37568 
 
 def take_a_pic(msg,file_name):
