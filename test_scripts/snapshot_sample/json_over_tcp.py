@@ -4,8 +4,8 @@ import sys
 import json
 
 #HOST="localhost"
-#HOST="172.20.1.11"
-HOST="192.168.1.2"
+HOST="172.20.1.11"
+#HOST="192.168.1.2"
 PORT=37568 
 
 def send_and_receive_msg(msg):

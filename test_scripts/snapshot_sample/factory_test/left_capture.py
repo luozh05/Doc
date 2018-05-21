@@ -6,7 +6,8 @@ import Image
 import struct
 import time
 
-HOST="172.20.1.11"
+#HOST="172.20.1.11"
+HOST="192.168.1.2"
 PORT=37568 
 
 def take_a_pic(msg):
@@ -20,6 +21,7 @@ def take_a_pic(msg):
     sock.send(msg)
 
     # Receive data from the server and shut down
+
     buf = ''
     while len(buf)<16:
             buf += sock.recv(16-len(buf))

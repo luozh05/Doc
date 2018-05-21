@@ -32,8 +32,9 @@ def start():
     #test set cases:right input, case 2
     cmd = {}
     #cmd["cmd-set-parameters"]="preview-format-values=preview-format-h264;preview-size-values=1280x800;preview-fps-values=30;receive-ip-address=172.20.1.1;receive-port=8554"
-    cmd["cmd-set-parameters"]="preview-format=preview-format-h264;preview-size=1280x800;preview-fps=30;receive-ip-address=127.0.0.1;receive-port=8554"
-    #cmd["cmd-set-parameters"]="preview-format=preview-format-h264;preview-size=1280x800;preview-fps=30;receive-ip-address=172.20.1.1;receive-port=8554"
+#    cmd["cmd-set-parameters"]="preview-format=preview-format-h264;preview-size=1280x800;preview-fps=30;receive-ip-address=127.0.0.1;receive-port=8554"
+    cmd["cmd-set-parameters"]="preview-format=preview-format-h264;preview-size=1280x800;preview-fps=30;receive-ip-address=172.20.1.1;receive-port=8554"
+
     cmd_string = json.dumps(cmd)
     result = send_and_receive_msg(cmd_string)
     if result == False:

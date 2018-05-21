@@ -18,6 +18,8 @@ def open_camera(x):
         cmd["cmd-set-parameters"] = "evt-version=evt-version-2.0;camera-name=remote-camera-avm-right"
     if x == '5':
         cmd["cmd-set-parameters"] = "evt-version=evt-version-2.0;camera-name=remote-camera-driver-monitor"
+    if x == '6':
+        cmd["cmd-set-parameters"] = "evt-version=evt-version-2.0;camera-name=remote-camera-avm-synthesis"
 
     print"cmd = ",cmd
     cmd_string = json.dumps(cmd)
@@ -44,11 +46,12 @@ def menu():
     print "left:    3"
     print "right:   4"
     print "monitor: 5"
+    print "avm:     6"
     print "capture: c"
     print "exit:    q"
 
 while True:
-    str=['1','2','3','4','5','c','q']
+    str=['1','2','3','4','5','6','c','q']
     menu()
     x=raw_input("\n选择:")
     if x == 'c':
